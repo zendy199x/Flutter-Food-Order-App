@@ -11,12 +11,12 @@ AppBar homeAppBar(BuildContext context) {
       onPressed: () {},
     ),
     title: RichText(
-      text: const TextSpan(
-        style: TextStyle(
-          color: ksecondaryColor,
-          fontWeight: FontWeight.bold,
-        ),
-        children: [
+      text: TextSpan(
+        style: Theme.of(context)
+            .textTheme
+            .subtitle1!
+            .copyWith(fontWeight: FontWeight.bold),
+        children: const [
           TextSpan(
             text: "Punk",
             style: TextStyle(color: ksecondaryColor),
